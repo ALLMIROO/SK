@@ -36,7 +36,7 @@ float: right;
 main {
 width: 73%;
 height: 400px;
-float: right;
+float:right;
 
 }
 
@@ -44,6 +44,7 @@ progress {
 background-color: lightgray;
 width: 73%;
 margin-bottom: 10px;
+float:right;
 }
 
 footer {
