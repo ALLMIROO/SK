@@ -57,19 +57,19 @@ section {
   text-align: left;
   margin-top: 60px;
   position: fixed; 
-  width:100%;
+  width:60%;
   height:340px;
 }
 
 
-progress {
-background-color: lightgray;
+.progress {
+background-color: lightgrey;
 width: 73%;
 height: 30px;
 margin-bottom: 10px;
 position: fixed; 
 bottom:100px;
-right: 1px;
+right: 5px;
 float: right;
 }
 
@@ -111,14 +111,20 @@ table {
 }
 
 
-.klient{
+.klient {
   display: inline;
 }
 
-.adres{
+.adres {
   display: none;
 }
 
-.kontakt{
+.kontakt {
   display: none;
+}
+
+.procent {
+background-color: navy;
+height: 30px;
+float: left;
 }
