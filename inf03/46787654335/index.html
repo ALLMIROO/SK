@@ -7,6 +7,29 @@
 </head>
 <body>
 
+
+
+<script>
+function Klient() {
+  document.getElementById("klient").style.display = "inline"; 
+  document.getElementById("adres").style.display = "none";
+  document.getElementById("kontakt").style.display = "none";        
+}
+
+function Adres() {
+  document.getElementById("klient").style.display = "none";  
+  document.getElementById("adres").style.display = "inline"; 
+  document.getElementById("kontakt").style.display = "none";         
+}
+
+function Kontakt() {
+  document.getElementById("klient").style.display = "none";  
+  document.getElementById("adres").style.display = "none"; 
+  document.getElementById("kontakt").style.display = "inline";         
+}
+</script>
+
+
 <aside>
 <img src="obraz2.png" alt="promocja">
 <h2>Sprawdź promocje</h2>
@@ -33,13 +56,15 @@
 <main>
 
     <nav>
-        <button>Klient</button>
-        <button>Adres</button>
-        <button>Kontakt</button>
+        <button type="button" onclick="Klient()">Klient</button>
+        <button type="button" onclick="Adres()">Adres</button>
+        <button type="button" onclick="Kontakt()">Kontakt</button>
     </nav>
 
     <section>
-        <form action="/action_page.php">
+
+    <div id="klient" class="klient">
+    <form>
         <p><label for="imie">Imię:</label></p>
         <p><input type="text" id="imie" name="imie"></p>
 
@@ -48,7 +73,37 @@
 
         <p><label for="dataur">Data urodzenia:</label></p>
         <p><input type="date" id="dataur" name="dataur" ></p>
-</form> 
+    </form>
+    </div>
+
+    <div id="adres" class="adres">
+    <form>
+        <p><label for="ulica">Ulica:</label></p>
+        <p><input type="text" id="ulica" name="ulica"></p>
+
+        <p><label for="numer">Numer:</label></p>
+        <p><input type="number" id="numer" name="numer" ></p>
+
+        <p><label for="miasto">Misto:</label></p>
+        <p><input type="text" id="miasto" name="miasto" ></p>
+    </form>
+    </div>
+
+    <div id="kontakt" class="kontakt">
+    <form>
+        <p><label for="telefon">Numer telefonu:</label></p>
+        <p><input type="tel" id="telefon" name="telefon"></p>
+
+
+        <p><input type="checkbox" id="rodo" name="rodo" required>
+        <label for="rodo">Akceptuję RODO</label></p>
+        
+
+        <button>Zatwierdź<br>dane</button>
+    </form>
+    </div>
+
+
     </section>
 
 

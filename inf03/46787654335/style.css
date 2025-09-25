@@ -110,3 +110,15 @@ table {
     border-width: 1px;
 }
 
+
+.klient{
+  display: inline;
+}
+
+.adres{
+  display: none;
+}
+
+.kontakt{
+  display: none;
+}
