@@ -1,0 +1,109 @@
+/* WYMAGANIA Z ARKUSZA – CAMBRIA + TŁO LINEN */
+*{ box-sizing: border-box; font-family: Cambria, serif; }
+body{ margin:0; background: Linen; }
+
+/* === GŁÓWNY GRID: 2 kolumny (25% | 73%) + 2% przerwy === */
+.page{
+  display: grid;
+  grid-template-columns: 25% 2% 73%;
+  grid-template-rows: auto auto auto;
+  align-items: start;
+  padding: 0 1%; /* żeby zgadzał się „oddech” */
+}
+
+/* ===== LEWA KOLUMNA ===== */
+.sidebar{
+  grid-column: 1 / 2;
+  grid-row: 1 / 4;                 /* rozciąga się na wysokość prawej kolumny */
+  width: 100%;
+  height: 510px;
+  margin: 0;                       /* marginesy: 0 góra/dół */
+  background: SteelBlue;
+  color: #fff;
+  text-align: center;
+  box-shadow: 4px 4px 5px DimGray;
+  padding: 10px;
+}
+.sidebar img{ max-width: 100%; height: auto; }
+.sidebar table{
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border: 1px dotted Navy;         /* obramowanie kropkowane 1px Navy */
+}
+.sidebar th, .sidebar td{
+  border: 1px dotted Navy;
+  padding: 6px 8px;
+}
+
+/* ===== PRAWA KOLUMNA ===== */
+.right{ grid-column: 3 / 4; }
+
+/* baner – 73% szer., 80px wys. + SteelBlue, biały tekst, wyśrodkowanie */
+.banner{
+  width: 100%;
+  height: 80px;
+  background: SteelBlue;
+  color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  text-align: center;
+}
+
+/* blok główny – 73% szer., 400px wys. */
+.main{
+  width: 100%;
+  height: 400px;
+  text-align: center;
+  position: relative;
+}
+
+/* przyciski: SteelBlue, biały, 20% szer., padding 15px, mt 30px, 130%, bez obramowania */
+.tabs{
+  display: flex; gap: 10px;
+  justify-content: left;
+}
+.tabs button{
+  background: SteelBlue; color: #fff;
+  width: 20%;
+  padding: 15px;
+  margin-top: 30px;
+  font-size: 130%;
+  border: none; cursor: pointer;
+}
+.tabs button:hover{ background: Navy; }
+
+/* trzy bloki z kontrolkami: LightBlue, margin-right 80px, padding 10px */
+.zakladka{
+  background: LightBlue;
+  margin: 20px 80px 0 auto; /* prawa 80px */
+  padding: 10px;
+  text-align: left;
+}
+.zakladka[hidden]{ display: none; }
+.confirm{ margin-top: 10px; }
+
+/* pasek postępu: LightGrey, szer. 73%, mb 10px; wewnętrzny: Navy, 4% x 30px */
+#postep {
+  width: 100%;
+  background: LightGrey;  /* kolor pustego paska */
+  margin: 0 0 10px 0;
+}
+#pasek {
+  width: 4%;
+  height: 30px;
+  background: Navy;        /* <--- kolor paska */
+  transition: width .3s ease; /* <--- ładne płynne zwiększanie */
+}
+
+/* stopka – pełna szerokość, pod gridem */
+.footer{
+  grid-column: 1 / -1;
+  width: 100%;
+  background: SteelBlue;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  clear: both;
+}
+
+
