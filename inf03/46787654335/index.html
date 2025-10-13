@@ -4,34 +4,13 @@
 <meta charset="utf-8">
 <title>Sklep - rejestracja</title>
 <link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+
+
 </head>
 <body>
 
-<script>
-function Klient() {
-  document.getElementById("klient").style.display = "inline"; 
-  document.getElementById("adres").style.display = "none";
-  document.getElementById("kontakt").style.display = "none";        
-}
 
-function Adres() {
-  document.getElementById("klient").style.display = "none";  
-  document.getElementById("adres").style.display = "inline"; 
-  document.getElementById("kontakt").style.display = "none";         
-}
-
-function Kontakt() {
-  document.getElementById("klient").style.display = "none";  
-  document.getElementById("adres").style.display = "none"; 
-  document.getElementById("kontakt").style.display = "inline";         
-}
-
-function progress() {
-    document.getElementById("procent").style.width = "50%";
-}
-
-
-</script>
 
 
 <aside>
@@ -65,40 +44,40 @@ function progress() {
         <button type="button" onclick="Kontakt()">Kontakt</button>
     </nav>
 
-    <section>
+    <section class="formularz">
     <div id="klient" class="klient">
     <form>
         <p><label for="imie">Imię:</label></p>
-        <p><input type="text" id="imie" name="imie" onfocusout="progress()"></p>
+        <p><input type="text" id="imie" name="imie" onblur="zwiekszPostep(this)"></p>
 
         <p><label for="nazwisko">Nazwisko:</label></p>
-        <p><input type="text" id="nazwisko" name="nazwisko" onfocusout="progress()"></p>
+        <p><input type="text" id="nazwisko" name="nazwisko" onblur="zwiekszPostep(this)"></p>
 
         <p><label for="dataur">Data urodzenia:</label></p>
-        <p><input type="date" id="dataur" name="dataur" onfocusout="progress()"></p>
+        <p><input type="date" id="dataur" name="dataur" onblur="zwiekszPostep(this)"></p>
     </form>
     </div>
 
     <div id="adres" class="adres">
     <form>
         <p><label for="ulica">Ulica:</label></p>
-        <p><input type="text" id="ulica" name="ulica" onfocusout="progress()"></p>
+        <p><input type="text" id="ulica" name="ulica" onblur="zwiekszPostep(this)"></p>
 
         <p><label for="numer">Numer:</label></p>
-        <p><input type="number" id="numer" name="numer"  onfocusout="progress()"></p>
+        <p><input type="number" id="numer" name="numer"  onblur="zwiekszPostep(this)"></p>
 
         <p><label for="miasto">Misto:</label></p>
-        <p><input type="text" id="miasto" name="miasto"  onfocusout="progress()"></p>
+        <p><input type="text" id="miasto" name="miasto"  onblur="zwiekszPostep(this)"></p>
     </form>
     </div>
 
     <div id="kontakt" class="kontakt">
     <form>
         <p><label for="telefon">Numer telefonu:</label></p>
-        <p><input type="tel" id="telefon" name="telefon" onfocusout="progress()"></p>
+        <p><input type="tel" id="telefon" name="telefon" onblur="zwiekszPostep(this)"></p>
 
 
-        <p><input type="checkbox" id="rodo" name="rodo"  onfocusout="progress()" required>
+        <p><input type="checkbox" id="rodo" name="rodo"  onblur="zwiekszPostep(this)" required>
         <label for="rodo">Akceptuję RODO</label></p>
         
 
@@ -109,9 +88,10 @@ function progress() {
 
 </main>
 
-<div class="progress">
-    <div id="procent" class="procent" style="width: 4%;"></div>
-</div>
+<section class="postep">
+    <section class="pasek"></section>
+</section>
+
 
 
 <footer>
