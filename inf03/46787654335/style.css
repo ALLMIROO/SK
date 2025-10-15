@@ -62,22 +62,8 @@ nav {
 }
 
 
-.postep {
-background-color: lightgrey;
-width: 73%;
-height: 30px;
-margin-bottom: 10px;
-position: fixed; 
-bottom:100px;
-right: 5px;
-float: right;
-}
 
-/* .progress {
-  width: 73%;
-  background-color: lightgray;
-  margin: 0 0 10px 0;
-} */
+
 
 footer {
 grid-column: 1/ -1;
@@ -130,9 +116,40 @@ table {
   display: none;
 }
 
-.pasek {
+/* .pasek {
 background-color: navy;
 height: 30px;
 float: left;
 width: 4%;
 }
+
+
+.progress {
+background-color: lightgrey;
+width: 73%;
+height: 30px;
+margin-bottom: 10px;
+position: fixed; 
+bottom:100px;
+right: 5px;
+float: right;
+} */
+
+
+.progress {
+    width: 73%;
+    height: 30px;
+    background: lightgrey;
+    overflow: hidden;
+    margin-bottom: 10px;
+    position: fixed; 
+    bottom:100px;
+    right: 5px;
+    float: right;
+  }
+  #pasek {
+    width: 4%;          
+    height: 100%;
+    background: navy;
+    transition: width .25s ease;
+  }

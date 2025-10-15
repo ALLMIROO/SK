@@ -44,53 +44,53 @@
         <button type="button" onclick="Kontakt()">Kontakt</button>
     </nav>
 
-    <section class="formularz">
+    <section class="formularz" id="formularz">
     <div id="klient" class="klient">
     <form>
         <p><label for="imie">Imię:</label></p>
-        <p><input type="text" id="imie" name="imie" onblur="zwiekszPostep(this)"></p>
+        <p><input type="text" id="imie" name="imie" placeholder="Wpisz dane..."></p>
 
         <p><label for="nazwisko">Nazwisko:</label></p>
-        <p><input type="text" id="nazwisko" name="nazwisko" onblur="zwiekszPostep(this)"></p>
+        <p><input type="text" id="nazwisko" name="nazwisko"></p>
 
         <p><label for="dataur">Data urodzenia:</label></p>
-        <p><input type="date" id="dataur" name="dataur" onblur="zwiekszPostep(this)"></p>
+        <p><input type="date" id="dataur" name="dataur"></p>
     </form>
     </div>
 
     <div id="adres" class="adres">
     <form>
         <p><label for="ulica">Ulica:</label></p>
-        <p><input type="text" id="ulica" name="ulica" onblur="zwiekszPostep(this)"></p>
+        <p><input type="text" id="ulica" name="ulica"></p>
 
         <p><label for="numer">Numer:</label></p>
-        <p><input type="number" id="numer" name="numer"  onblur="zwiekszPostep(this)"></p>
+        <p><input type="number" id="numer" name="numer"></p>
 
         <p><label for="miasto">Misto:</label></p>
-        <p><input type="text" id="miasto" name="miasto"  onblur="zwiekszPostep(this)"></p>
+        <p><input type="text" id="miasto" name="miasto"></p>
     </form>
     </div>
 
     <div id="kontakt" class="kontakt">
     <form>
         <p><label for="telefon">Numer telefonu:</label></p>
-        <p><input type="tel" id="telefon" name="telefon" onblur="zwiekszPostep(this)"></p>
+        <p><input type="tel" id="telefon" name="telefon"></p>
 
 
-        <p><input type="checkbox" id="rodo" name="rodo"  onblur="zwiekszPostep(this)" required>
+        <p><input type="checkbox" id="rodo" name="rodo" required>
         <label for="rodo">Akceptuję RODO</label></p>
         
 
-        <button>Zatwierdź<br>dane</button>
+        <button type="button" id="zatwierdz">Zatwierdź dane</button>
     </form>
     </div>
     </section>
 
 </main>
 
-<section class="postep">
-    <section class="pasek"></section>
-</section>
+<div class="progress">
+    <div id="pasek"></div>
+</div>
 
 
 

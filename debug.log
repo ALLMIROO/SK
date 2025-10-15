@@ -1,0 +1,4 @@
+[1015/082132.163:ERROR:registration_protocol_win.cc(108)] CreateFile: Nie można odnaleźć określonego pliku. (0x2)
+[1015/082132.474:ERROR:registration_protocol_win.cc(108)] CreateFile: Nie można odnaleźć określonego pliku. (0x2)
+[1015/082250.175:ERROR:registration_protocol_win.cc(108)] CreateFile: Nie można odnaleźć określonego pliku. (0x2)
+[1015/082447.700:ERROR:registration_protocol_win.cc(108)] CreateFile: Nie można odnaleźć określonego pliku. (0x2)
