@@ -36,3 +36,16 @@ footer {
     text-align: right;
     padding: 10px;
 }
+
+ul {
+    text-align: left;
+}
+
+button {
+    background-color: #00838F;
+    color: white;
+}
+
+button:hover {
+    color: #80DEEA;
+}
