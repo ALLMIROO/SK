@@ -22,12 +22,13 @@ nav {
 a {
     color: white;
     text-decoration: none;
+    background-color: #006064;
     font-size: 150%;
 }
 
 main {
     height: 350px;
-    width: 33%;
+    width: 100%;
 }
 
 footer {
@@ -37,15 +38,35 @@ footer {
     padding: 10px;
 }
 
-ul {
+i {
+    background-color: #006064;
+}
+
+ul, li {
     text-align: left;
 }
 
 button {
     background-color: #00838F;
     color: white;
+    margin-right: 30px;
 }
 
 button:hover {
     color: #80DEEA;
+}
+
+.blok1 {
+float: left;
+width: 33%;
+}
+
+.blok2 {
+    float: left;
+    width: 33%;
+}
+
+.blok3 {
+    float: right;
+    width: 33%;
 }
