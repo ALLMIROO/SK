@@ -1,12 +1,15 @@
-* {
+/* * {
     background-color: #E0F7FA;
     text-align: center;
     font-family: Arial;
-}
+} */
 
 body {
     width: 95%;
     margin: auto;
+    background-color: #E0F7FA;
+    text-align: center;
+    font-family: Arial;
 }
 
 header {
