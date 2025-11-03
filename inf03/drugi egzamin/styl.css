@@ -25,9 +25,10 @@ nav {
 a {
     color: white;
     text-decoration: none;
-    background-color: #006064;
     font-size: 150%;
+    margin-right: 30px;
 }
+
 
 main {
     height: 350px;
@@ -41,9 +42,6 @@ footer {
     padding: 10px;
 }
 
-i {
-    background-color: #006064;
-}
 
 ul, li {
     text-align: left;
@@ -52,7 +50,6 @@ ul, li {
 button {
     background-color: #00838F;
     color: white;
-    margin-right: 30px;
 }
 
 button:hover {

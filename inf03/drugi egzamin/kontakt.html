@@ -20,21 +20,66 @@
     <main>
         <div class="blok1">
             <p></p>
-        </div class="blok1">
+        </div>
 
         <div class="blok2">
             <h2>Kontakt</h2>
-             
-        </div class="blok2">
+            <table>
+                <tr>
+                    <th>Imię:</th>
+                    <th><input type="text" id="imie" name="imie"></th>
+                </tr>
+                <tr>
+                    <th>Nazwisko:</th>
+                    <th><input type="text" id="nazwisko" name="nazwisko"></th>
+                </tr>
+                <tr>
+                    <th>E-mail:</th>
+                    <th><input type="email" id="email" name="email"></th>
+                </tr>
+                <tr>
+                    <th>Zgłoszenie:</th>
+                    <th>
+                        <select id="zgloszenie" name="zgloszenie">
+                            <option value="naprawa komputerów">naprawa komputerów</option>
+                            <option value="odzyskiwanie danych">odzyskiwanie danych</option>
+                            <option value="wirusy">wirusy</option>
+                            <option value="konfiguracja LAN ">konfiguracja LAN</option>
+                        </select>
+                    </th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th><input type="checkbox" id="kopia" name="kopia" value="kopia" checked>Wyślij kopię wiadomości</th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th><button onclick="location.reload()">Czyść</button> <button onclick="funkcja()">Wyśli</button></th>
+                </tr>
+            </table>
+            <hr id="linia" style="display:none">
+            <p id="demo"></p>
+        </div>
 
         <div class="blok3">
             <p></p>
-        </div class="blok3">
+        </div>
     </main>
     <footer>
         Autor: <i>0000000000</i>
     </footer>
 
 
+
+<script>
+    function funkcja() {
+        const imie = document.getElementById("imie");
+        const nazwisko = document.getElementById("nazwisko");
+        const email = document.getElementById("email");
+        const zgloszenie = document.getElementById("zgloszenie");
+        document.getElementById("linia").style.display = "flex";
+        document.getElementById("demo").innerHTML = imie.value+" "+nazwisko.value+"<br>"+email.value+"<br>Usługa: "+zgloszenie.value;
+    }
+</script> 
 </body>
 </html>
