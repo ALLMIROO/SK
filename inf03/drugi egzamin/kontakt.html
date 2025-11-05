@@ -26,35 +26,35 @@
             <h2>Kontakt</h2>
             <table>
                 <tr>
-                    <th>Imię:</th>
-                    <th><input type="text" id="imie" name="imie"></th>
+                    <td>Imię:</td>
+                    <td><input type="text" id="imie" name="imie"></td>
                 </tr>
                 <tr>
-                    <th>Nazwisko:</th>
-                    <th><input type="text" id="nazwisko" name="nazwisko"></th>
+                    <td>Nazwisko:</td>
+                    <td><input type="text" id="nazwisko" name="nazwisko"></td>
                 </tr>
                 <tr>
-                    <th>E-mail:</th>
-                    <th><input type="email" id="email" name="email"></th>
+                    <td>E-mail:</td>
+                    <td><input type="email" id="email" name="email"></td>
                 </tr>
                 <tr>
-                    <th>Zgłoszenie:</th>
-                    <th>
+                    <td>Zgłoszenie:</td>
+                    <td>
                         <select id="zgloszenie" name="zgloszenie">
                             <option value="naprawa komputerów">naprawa komputerów</option>
                             <option value="odzyskiwanie danych">odzyskiwanie danych</option>
                             <option value="wirusy">wirusy</option>
                             <option value="konfiguracja LAN ">konfiguracja LAN</option>
                         </select>
-                    </th>
+                    </td>
                 </tr>
                 <tr>
-                    <th></th>
-                    <th><input type="checkbox" id="kopia" name="kopia" value="kopia" checked>Wyślij kopię wiadomości</th>
+                    <td></td>
+                    <td><input type="checkbox" id="kopia" name="kopia" value="kopia" checked>Wyślij kopię wiadomości</td>
                 </tr>
                 <tr>
-                    <th></th>
-                    <th><button onclick="location.reload()">Czyść</button> <button onclick="funkcja()">Wyśli</button></th>
+                    <td></td>
+                    <td><button onclick="location.reload()">Czyść</button> <button onclick="funkcja()">Wyśli</button></td>
                 </tr>
             </table>
             <hr id="linia" style="display:none">
@@ -73,12 +73,12 @@
 
 <script>
     function funkcja() {
-        const imie = document.getElementById("imie");
-        const nazwisko = document.getElementById("nazwisko");
-        const email = document.getElementById("email");
-        const zgloszenie = document.getElementById("zgloszenie");
+        const imie = document.getElementById("imie").value;
+        const nazwisko = document.getElementById("nazwisko").value;
+        const email = document.getElementById("email").value;
+        const zgloszenie = document.getElementById("zgloszenie").value;
         document.getElementById("linia").style.display = "flex";
-        document.getElementById("demo").innerHTML = imie.value+" "+nazwisko.value+"<br>"+email.value+"<br>Usługa: "+zgloszenie.value;
+        document.getElementById("demo").innerHTML = imie+" "+nazwisko+"<br>"+email+"<br>Usługa: "+zgloszenie;
     }
 </script> 
 </body>
