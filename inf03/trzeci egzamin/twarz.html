@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Salon kosmetyczny</title>
+<link rel="stylesheet" href="styl7.css">
+</head>
+<body>
+
+    <header>
+        <h1>Usługi kosmetyczne</h1>
+    </header>
+
+    <main>
+        <h3>Kalkulator ceny wizyty</h3>
+        <form onsubmit="return false;">
+            <input type="checkbox" id="peeling" name="peeling" value="peeling">
+            <label for="peeling">Peeling</label><br>
+            <input type="checkbox" id="maska" name="maska" value="maska">
+            <label for="maska">Maska</label><br>
+            <input type="checkbox" id="masaz" name="masaz" value="masaz">
+            <label for="masaz">Masaż twarzy</label><br>
+            <input type="checkbox" id="makijaz" name="makijaz" value="makijaz">
+            <label for="makijaz">Makijaż</label><br>
+            <button onclick="funkcja()">Oblicz cenę</button>
+        </form>
+         <p id="demo"></p>
+    </main>
+
+    <article>
+       <h2>Nasza oferta</h2>
+       
+       <ol>
+            <li><a href="twarz.html">Oczyszczanie twarzy</a>
+                <ul>
+                    <li>Peeling</li>
+                    <li>Maska</li>
+                </ul>
+            </li>
+            <li>Masaż</li>
+            <li>Makijaż</li>
+        </ol>
+
+        <a class="index" href="index.html">Strona główna</a>
+    </article>
+
+    <aside>
+        <img src="obraz1.jpg" alt="Personel">
+    </aside>
+
+    <footer>
+        <p>Autor: 000000000</p>
+    </footer>
+
+<script>
+
+    function funkcja() {
+        var suma = 0;
+        document.getElementById("demo").innerHTML = "Cena zabiegów:"+suma;
+    }
+
+    function cena() {
+        var suma = 0;
+        
+        const peelingcena = 45;
+        const maskacena = 30;
+        const masazcena = 20;
+        const makijazcena = 50;
+        
+        const peeling = document.getElementById("peeling").value;
+        const maska = document.getElementById("maska").value;
+        const masaz = document.getElementById("masaz").value;
+        const makijaz = document.getElementById("makijaz").value;
+
+        if (peeling="peeling") {
+            suma=suma+peelingcena;
+        }
+
+        if (maska="maska") {
+            suma=suma+maskacena;
+        }
+
+        if (masaz="masaz") {
+            suma=suma+masazcena;
+        }
+
+        if (makijaz="makijaz") {
+            suma=suma+makijazcena;
+        }
+        
+        document.getElementById("demo").innerHTML = "Cena zabiegów:";
+    }
+</script>
+</body>
+</html>

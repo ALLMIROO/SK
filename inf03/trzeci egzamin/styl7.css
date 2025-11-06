@@ -1,0 +1,68 @@
+* {
+    font-family: Cambria;
+}
+
+header {
+width: 75%;
+font-size: 170%;
+text-align: center;
+background-color: #9C64A6;
+color: white;
+height: 150px;
+letter-spacing: 5px;
+float:right;
+}
+
+main {
+width: 75%;
+font-size: 170%;
+text-align: center;
+color: indigo;
+height: 580px;
+float: right;
+}
+
+
+/* lista */
+article {
+background-color:  #E1BEE7;
+width: 25%;
+height: 400px;
+}
+
+
+/* obraz */
+aside {
+background-color:  #E1BEE7;
+width: 25%;
+height: 330px;
+}
+
+footer {
+    background-color: #9C64A6;
+    color: white;
+    padding: 10px;
+}
+
+
+h2 {
+    text-align: center;
+}
+
+ul {
+    list-style-type:circle;
+}
+
+img {
+    padding: 4px;
+    margin: 15px;
+}
+
+img:hover {
+    padding: 3px;
+    border: 1px dashed indigo;
+}
+
+.index {
+    margin: 25px;
+}
