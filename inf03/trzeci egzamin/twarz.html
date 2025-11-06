@@ -56,40 +56,27 @@
 
     function funkcja() {
         var suma = 0;
-        document.getElementById("demo").innerHTML = "Cena zabiegów:"+suma;
-    }
-
-    function cena() {
-        var suma = 0;
-        
         const peelingcena = 45;
         const maskacena = 30;
         const masazcena = 20;
         const makijazcena = 50;
-        
-        const peeling = document.getElementById("peeling").value;
-        const maska = document.getElementById("maska").value;
-        const masaz = document.getElementById("masaz").value;
-        const makijaz = document.getElementById("makijaz").value;
 
-        if (peeling="peeling") {
+        if (peeling.checked == true){
             suma=suma+peelingcena;
         }
-
-        if (maska="maska") {
+        if (maska.checked == true){
             suma=suma+maskacena;
         }
-
-        if (masaz="masaz") {
+        if (masaz.checked == true){
             suma=suma+masazcena;
         }
-
-        if (makijaz="makijaz") {
+        if (makijaz.checked == true){
             suma=suma+makijazcena;
         }
         
-        document.getElementById("demo").innerHTML = "Cena zabiegów:";
+        document.getElementById("demo").innerHTML = "Cena zabiegów:"+suma;
     }
+
 </script>
 </body>
 </html>
