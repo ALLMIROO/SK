@@ -27,14 +27,6 @@ footer {
 }
 
 .f2 {
-    float: left;
-}
-
-.f3 {
-    float: right;
-}
-
-.f4 {
     float: right;
 }
 
@@ -42,9 +34,14 @@ footer {
 
 
 
-/* form {
 
-} */
+form {
+    background-color: #FCE4EC;
+    width: 25%;
+    height: 300px;
+    margin: 25px;
+    padding: 16px;
+}
 
 p {
     padding-left: 20px;
@@ -74,3 +71,4 @@ video {
     height: 100%;
     width: 100%;
 }
+
