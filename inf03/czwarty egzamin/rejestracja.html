@@ -12,12 +12,27 @@
 </header>
 
 <main>
-    <form>
+    <form class="form1" id="form1" onsubmit="return false;">
         <h2>Dane osobowe</h2>
-        <input type="text" id="imie" name="imie" placeholder="Wpisz imię..." required>
-        <input type="text" id="nazwisko" name="nazwisko" placeholder="Wpisz nazwisko..." required>
-        <button>Następna karta</button>
+        <input type="text" id="imie" name="imie" placeholder="Wpisz imię..." >
+        <input type="text" id="nazwisko" name="nazwisko" placeholder="Wpisz nazwisko...">
+        <button onclick="osobowe()">Następna karta</button>
     </form>
+
+    <form class="form2" id="form2" onsubmit="return false;">
+      <h2>Dane kontaktowe</h2>
+      <input type="email" id="email" name="email" placeholder="Twój e-mail...">
+      <input type="tel" id="tel" name="tel" placeholder="Twój numer telefonu...">
+      <button onclick="kontaktowe()">Następna karta</button>
+    </form>
+
+    <form class="form3" id="form3" onsubmit="return false;">
+      <h2>Hasło do logowania</h2>
+      <input type="password" id="password" name="password" placeholder="Podaj hasło">
+      <input type="password" id="password2" name="password2" placeholder="Powtórz hasło">
+      <button>Zatwierdź</button>
+    </form>
+  
 </main>
 
 <footer class="f1">
@@ -29,16 +44,49 @@
 </footer>
 
 <footer class="f1">
-
+<h3>Plan konferencj</h3>
+<table>
+  <tr>
+    <td>9:00 - 12:00</td>
+    <td>Pielęgnacja roślin</td>
+  </tr>
+  <tr>
+    <td>13:00 - 15:00</td>
+    <td>Targi kwiatowe</td>
+  </tr>
+  </table>
 </footer>
 
 <footer class="f2">
-    
+  <p>Formularz wykonał: 0000000000</p>
 </footer>
 
 <footer class="f2">
-    
+  <p><a href=" https://kwiaty.pl/">Internetowa kwiaciarnia</a></p>
 </footer>
 
+
+
+<script>
+  function osobowe() {
+    document.getElementById("form1").style.display = "none";
+    document.getElementById("form2").style.display = "inline-block";
+    document.getElementById("form3").style.display = "none";
+  }
+  function kontaktowe() {
+    document.getElementById("form1").style.display = "none";
+    document.getElementById("form2").style.display = "none";
+    document.getElementById("form3").style.display = "inline-block";
+  }
+  function zatwierdz() {
+    const haslo1 = document.getElementById("password").value;
+    const haslo2 = document.getElementById("password2").value;
+    const imie = document.getElementById("imie").value;
+    const nazwisko = document.getElementById("nazwisko").value;
+    if (haslo1 != haslo2) {
+      
+    }
+  }
+</script>
 </body>
 </html> 

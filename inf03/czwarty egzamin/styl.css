@@ -13,6 +13,10 @@ header {
 main {
 height: 500px;
 background-image: url('tulipany.jpg');
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+overflow: auto;
 }
 
 footer {
@@ -31,6 +35,22 @@ footer {
 }
 
 
+.form1 {
+    float: left;
+    display: inline;
+}
+
+.form3 {
+    float: right;
+    display: none;
+}
+
+.form2 {
+    display: none;
+    margin-left: 33%;
+    margin-right: 33%;
+}
+
 
 
 
@@ -41,6 +61,7 @@ form {
     height: 300px;
     margin: 25px;
     padding: 16px;
+    
 }
 
 p {
@@ -71,4 +92,3 @@ video {
     height: 100%;
     width: 100%;
 }
-
