@@ -1,0 +1,4 @@
+SELECT imie, miot FROM `swinki` WHERE data_ur > "2022-06-30" AND data_ur < "2022-08-01";
+SELECT DISTINCT swinki.data_ur, swinki.miot, rasy.rasa FROM swinki INNER JOIN rasy ON swinki.rasy_id=rasy.id WHERE swinki.rasy_id = 1;
+SELECT imie, cena, opis FROM `swinki` WHERE rasy_id = 1;
+SELECT rasa FROM rasy;
