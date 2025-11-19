@@ -14,8 +14,8 @@
 <main>
     <form class="form1" id="form1" onsubmit="return false;">
         <h2>Dane osobowe</h2>
-        <input type="text" id="imie" name="imie" placeholder="Wpisz imię..." >
-        <input type="text" id="nazwisko" name="nazwisko" placeholder="Wpisz nazwisko...">
+        <input type="text" id="imie" name="imie" placeholder="Wpisz imię..." required>
+        <input type="text" id="nazwisko" name="nazwisko" placeholder="Wpisz nazwisko..." required>
         <button onclick="osobowe()">Następna karta</button>
     </form>
 
@@ -30,7 +30,7 @@
       <h2>Hasło do logowania</h2>
       <input type="password" id="password" name="password" placeholder="Podaj hasło">
       <input type="password" id="password2" name="password2" placeholder="Powtórz hasło">
-      <button>Zatwierdź</button>
+      <button onclick="zatwierdz()">Zatwierdź</button>
     </form>
   
 </main>
@@ -44,7 +44,7 @@
 </footer>
 
 <footer class="f1">
-<h3>Plan konferencj</h3>
+<h3>Plan konferencji</h3>
 <table>
   <tr>
     <td>9:00 - 12:00</td>
@@ -83,8 +83,10 @@
     const haslo2 = document.getElementById("password2").value;
     const imie = document.getElementById("imie").value;
     const nazwisko = document.getElementById("nazwisko").value;
-    if (haslo1 != haslo2) {
-      
+    if (haslo1 !== haslo2) {
+      alert("Podane hasła różnią się");
+    } else {
+      console.log("Witaj", imie, nazwisko)
     }
   }
 </script>
